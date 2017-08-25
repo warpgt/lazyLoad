@@ -1,36 +1,6 @@
 /**
- * Plugin do uruchamiania akcji dopiero gdy element jest widoczny na ekranie dla urzytkownika
+ * jQuery plugin for performing actions on dom elements when user look at them for a period of time
  *
- * @example
- $(document).ready(function(){
-	
-	$( window ).scroll(function() {
-	  $('.lazyL').lazyLoad();
-	});
-	
-	$( window ).resize(function() {
-	  $('.lazyL').lazyLoad();
-	});
-});
-
-...
-function loadingCB($element){
-console.log('loading...',$element.attr('class'));
-}
-function loadedCB($element){
-console.log('loaded',$element.attr('class'));
-}
-function skippedCB($element){
-console.log('skipped',$element.attr('class'));
-}
-$('#lazyL').lazyLoad({
-    timeout: 5000,
-    loadingCB: loadingCB,
-    loadedCB: loadedCB,
-    skippedCB: skippedCB
-});
-...
- * 
  * @author WA
  */
 (function ( $ ) {
