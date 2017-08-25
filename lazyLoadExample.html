@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head>
+<style type="text/css">
+div.lazyL{
+	border:1px solid #FF0000;
+	height:100px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+<script src="./lazyLoad.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var settings = {
+		timeout: 2000
+	};
+
+	$( window ).scroll(function() {
+	  $('.lazyL').lazyLoad(settings);
+	});
+	
+	$( window ).resize(function() {
+	  $('.lazyL').lazyLoad(settings);
+	});
+});
+</script>
+</head>
+<body>
+<div style='height:600px;'></div>
+<div class="lazyL">
+     no content1
+</div>
+	
+<div class="lazyL">
+     no content2
+</div>
+<div style='height:600px;'></div>
+</body></html>
